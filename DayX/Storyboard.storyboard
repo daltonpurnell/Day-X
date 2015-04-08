@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dOw-MJ-xbI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="ZL2-7X-GiC">
+            <objects>
+                <viewController id="dzu-ZV-8Mv" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HCq-sa-bei"/>
+                        <viewControllerLayoutGuide type="bottom" id="20U-ib-gbi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hbE-v8-Agu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text that will be cleared" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0em-J7-7go">
+                                <rect key="frame" x="16" y="100" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dzu-ZV-8Mv" id="LYG-dK-52i"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-fe-Fof">
+                                <rect key="frame" x="255" y="200" width="329" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="dzu-ZV-8Mv" eventType="touchUpInside" id="BXK-45-PIA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-3i-gsB">
+                                <rect key="frame" x="38" y="171" width="209" height="258"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="Vg4-3x-mLL"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dzu-ZV-8Mv" id="Pfr-QD-N0S"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="20U-ib-gbi" firstAttribute="top" secondItem="X0K-3i-gsB" secondAttribute="bottom" constant="171" id="4Zp-Vb-xfU"/>
+                            <constraint firstItem="X0K-3i-gsB" firstAttribute="top" secondItem="0em-J7-7go" secondAttribute="bottom" constant="41" id="61r-pv-dFW"/>
+                            <constraint firstItem="KWH-fe-Fof" firstAttribute="leading" secondItem="X0K-3i-gsB" secondAttribute="trailing" constant="8" id="KSm-y0-IzZ"/>
+                            <constraint firstItem="0em-J7-7go" firstAttribute="trailing" secondItem="hbE-v8-Agu" secondAttribute="trailingMargin" id="Ob3-Gz-VeG"/>
+                            <constraint firstItem="KWH-fe-Fof" firstAttribute="top" secondItem="0em-J7-7go" secondAttribute="bottom" constant="70" id="UiO-K2-JMM"/>
+                            <constraint firstItem="0em-J7-7go" firstAttribute="top" secondItem="HCq-sa-bei" secondAttribute="bottom" constant="36" id="VVV-eP-3XX"/>
+                            <constraint firstItem="0em-J7-7go" firstAttribute="leading" secondItem="hbE-v8-Agu" secondAttribute="leadingMargin" id="cbI-8W-vEb"/>
+                            <constraint firstItem="X0K-3i-gsB" firstAttribute="leading" secondItem="hbE-v8-Agu" secondAttribute="leadingMargin" constant="22" id="gar-ZG-9HC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OJK-ob-p9D"/>
+                    <connections>
+                        <outlet property="textField" destination="0em-J7-7go" id="Dd0-3h-zm2"/>
+                        <outlet property="textView" destination="X0K-3i-gsB" id="aa4-96-op1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7S-mR-rwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="281"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="evH-Rp-bxG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dOw-MJ-xbI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wr6-wy-owL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dzu-ZV-8Mv" kind="relationship" relationship="rootViewController" id="U9k-tq-1wO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alg-sa-awt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="281"/>
+        </scene>
+    </scenes>
+</document>
