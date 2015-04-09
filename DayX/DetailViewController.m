@@ -58,6 +58,7 @@ static NSString * const keyForBodyText = @"body text";
     
     self.textField.text = @"";
     self.textView.text = @"";
+    [self save];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,8 +72,6 @@ static NSString * const keyForBodyText = @"body text";
     
     return YES;
 }
-
-
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {

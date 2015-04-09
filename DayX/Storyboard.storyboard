@@ -28,10 +28,12 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text that will be cleared" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-3i-gsB">
-                                <rect key="frame" x="16" y="209" width="345" height="303"/>
+                                <rect key="frame" x="16" y="148" width="278" height="303"/>
                                 <color key="backgroundColor" red="0.89883207070707072" green="0.89883207070707072" blue="0.89883207070707072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="345" id="Y26-ie-9wh"/>
+                                    <constraint firstAttribute="width" constant="278" id="Y26-ie-9wh">
+                                        <variation key="widthClass=compact" constant="200"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -40,10 +42,13 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWH-fe-Fof">
-                                <rect key="frame" x="16" y="163" width="568" height="30"/>
+                                <rect key="frame" x="302" y="148" width="282" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="224" y="148" width="160" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="clear:" destination="dzu-ZV-8Mv" eventType="touchUpInside" id="BXK-45-PIA"/>
                                 </connections>
@@ -51,11 +56,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="X0K-3i-gsB" firstAttribute="leading" secondItem="KWH-fe-Fof" secondAttribute="leading" id="ASv-wL-9Xr"/>
-                            <constraint firstItem="20U-ib-gbi" firstAttribute="top" secondItem="X0K-3i-gsB" secondAttribute="bottom" constant="88" id="E4Q-5P-j6s"/>
-                            <constraint firstItem="X0K-3i-gsB" firstAttribute="top" secondItem="KWH-fe-Fof" secondAttribute="bottom" constant="16" id="L9u-zq-KJz"/>
+                            <constraint firstItem="X0K-3i-gsB" firstAttribute="leading" secondItem="KWH-fe-Fof" secondAttribute="leading" constant="-286" id="ASv-wL-9Xr">
+                                <variation key="widthClass=compact" constant="-208"/>
+                            </constraint>
+                            <constraint firstItem="20U-ib-gbi" firstAttribute="top" secondItem="X0K-3i-gsB" secondAttribute="bottom" constant="149" id="E4Q-5P-j6s"/>
+                            <constraint firstItem="X0K-3i-gsB" firstAttribute="top" secondItem="KWH-fe-Fof" secondAttribute="bottom" constant="-30" id="L9u-zq-KJz"/>
                             <constraint firstItem="0em-J7-7go" firstAttribute="trailing" secondItem="hbE-v8-Agu" secondAttribute="trailingMargin" id="Ob3-Gz-VeG"/>
-                            <constraint firstItem="KWH-fe-Fof" firstAttribute="top" secondItem="0em-J7-7go" secondAttribute="bottom" constant="33" id="UiO-K2-JMM"/>
+                            <constraint firstItem="KWH-fe-Fof" firstAttribute="top" secondItem="0em-J7-7go" secondAttribute="bottom" constant="18" id="UiO-K2-JMM"/>
                             <constraint firstItem="0em-J7-7go" firstAttribute="top" secondItem="HCq-sa-bei" secondAttribute="bottom" constant="36" id="VVV-eP-3XX"/>
                             <constraint firstItem="0em-J7-7go" firstAttribute="leading" secondItem="hbE-v8-Agu" secondAttribute="leadingMargin" id="cbI-8W-vEb"/>
                             <constraint firstItem="X0K-3i-gsB" firstAttribute="leading" secondItem="0em-J7-7go" secondAttribute="leading" id="vd6-KH-SsN"/>
@@ -69,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7S-mR-rwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="281"/>
+            <point key="canvasLocation" x="1032" y="281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="evH-Rp-bxG">
