@@ -21,6 +21,7 @@
 		711A508F19388096005642EF /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 711A508E19388096005642EF /* DayXTests.m */; };
 		CF316E711AD4C85F002DB7BF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF316E701AD4C85F002DB7BF /* Storyboard.storyboard */; };
 		CF316E741AD4C953002DB7BF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316E731AD4C953002DB7BF /* DetailViewController.m */; };
+		CF316E761AD4DB05002DB7BF /* WrinkledPaperBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CF316E751AD4DB05002DB7BF /* WrinkledPaperBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CF316E701AD4C85F002DB7BF /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		CF316E721AD4C953002DB7BF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CF316E731AD4C953002DB7BF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CF316E751AD4DB05002DB7BF /* WrinkledPaperBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WrinkledPaperBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				CF316E731AD4C953002DB7BF /* DetailViewController.m */,
 				CF316E701AD4C85F002DB7BF /* Storyboard.storyboard */,
 				711A507B19388095005642EF /* Images.xcassets */,
+				CF316E751AD4DB05002DB7BF /* WrinkledPaperBackground.png */,
 				711A507019388095005642EF /* Supporting Files */,
 			);
 			path = DayX;
@@ -230,6 +233,7 @@
 			files = (
 				711A507419388095005642EF /* InfoPlist.strings in Resources */,
 				711A507C19388095005642EF /* Images.xcassets in Resources */,
+				CF316E761AD4DB05002DB7BF /* WrinkledPaperBackground.png in Resources */,
 				CF316E711AD4C85F002DB7BF /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

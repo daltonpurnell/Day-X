@@ -18,25 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="please type your social security number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-TW-Ehw">
-                                <rect key="frame" x="16" y="100" width="568" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="lIg-ZX-NVd" id="WHA-oy-LVJ"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCL-uY-oMq">
-                                <rect key="frame" x="16" y="152" width="568" height="30"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clear:" destination="lIg-ZX-NVd" eventType="touchUpInside" id="p6k-ST-dIL"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="This is a bunch of text that you will be able to clear once you tap the Clear button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0In-wR-NaL">
-                                <rect key="frame" x="16" y="190" width="568" height="116"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is a bunch of text that you will be able to clear once you tap the Clear button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0In-wR-NaL">
+                                <rect key="frame" x="16" y="178" width="568" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -44,6 +27,25 @@
                                     <outlet property="delegate" destination="lIg-ZX-NVd" id="j3S-dG-rnK"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCL-uY-oMq">
+                                <rect key="frame" x="16" y="152" width="568" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="lIg-ZX-NVd" eventType="touchUpInside" id="p6k-ST-dIL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type something and then hit the &quot;Clear&quot; button" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-TW-Ehw">
+                                <rect key="frame" x="16" y="100" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lIg-ZX-NVd" id="WHA-oy-LVJ"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -51,12 +53,12 @@
                             <constraint firstItem="QCL-uY-oMq" firstAttribute="trailing" secondItem="Gba-TW-Ehw" secondAttribute="trailing" id="Ouz-JZ-h4v"/>
                             <constraint firstItem="Gba-TW-Ehw" firstAttribute="trailing" secondItem="r6N-ZN-PKT" secondAttribute="trailingMargin" id="VBo-Dw-FzC"/>
                             <constraint firstItem="Gba-TW-Ehw" firstAttribute="leading" secondItem="r6N-ZN-PKT" secondAttribute="leadingMargin" id="XbB-YX-XLd"/>
-                            <constraint firstItem="0In-wR-NaL" firstAttribute="top" secondItem="QCL-uY-oMq" secondAttribute="bottom" constant="8" id="ak2-r8-clG"/>
+                            <constraint firstItem="0In-wR-NaL" firstAttribute="top" secondItem="QCL-uY-oMq" secondAttribute="bottom" constant="-4" id="ak2-r8-clG"/>
                             <constraint firstItem="0In-wR-NaL" firstAttribute="trailing" secondItem="QCL-uY-oMq" secondAttribute="trailing" id="dId-yG-AnE"/>
                             <constraint firstItem="Gba-TW-Ehw" firstAttribute="top" secondItem="2rz-WN-ed4" secondAttribute="bottom" constant="36" id="lNR-BC-qHQ"/>
                             <constraint firstItem="0In-wR-NaL" firstAttribute="leading" secondItem="QCL-uY-oMq" secondAttribute="leading" id="lgF-dh-A97"/>
                             <constraint firstItem="QCL-uY-oMq" firstAttribute="leading" secondItem="Gba-TW-Ehw" secondAttribute="leading" id="qrQ-Mq-BXV"/>
-                            <constraint firstItem="QCL-uY-oMq" firstAttribute="top" secondItem="Gba-TW-Ehw" secondAttribute="bottom" constant="23" id="y2T-O8-Wbw"/>
+                            <constraint firstItem="QCL-uY-oMq" firstAttribute="top" secondItem="Gba-TW-Ehw" secondAttribute="bottom" constant="22" id="y2T-O8-Wbw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L9T-gG-qRz"/>
@@ -67,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gZ-O4-etK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="361"/>
+            <point key="canvasLocation" x="1029" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QzW-ZV-tCd">
