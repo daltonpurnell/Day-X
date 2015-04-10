@@ -7,23 +7,15 @@
 //
 
 #import "DetailViewController.h"
-
-// Add a static key for entry
-static NSString * const keyForEntry = @"entry";
-
-// Add a static key for title
-static NSString * const keyForTitle = @"title";
-
-// Add a static key for pody text
-static NSString * const keyForBodyText = @"body text";
-
-
+#import "Entry.h"
 
 @interface DetailViewController () <UITextFieldDelegate, UITextViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+
+@property (strong, nonatomic) Entry *entry;
 
 
 @end
@@ -39,33 +31,24 @@ static NSString * const keyForBodyText = @"body text";
     
 // call the updateWithDictionary method and pass in the dictionary retrieved
     [self updateViewWithDictionary:entry];
-    
-    
-    
-    
-    // capture the values for all the different key value pairs
-    //
-    //    NSDictionary *iceCreamShops = [self iceCreamShops];
-    //    NSString *cityName = [iceCreamShops objectForKey:@"city"];
-    //    NSArray *storesArray = [iceCreamShops objectForKey:@"stores"];
-    //    NSDictionary *firstStore = storesArray[0];
-    //    NSDictionary *secondStore = storesArray[1];
-    //    NSString *firstStoreName = [firstStore objectForKey:@"name"];
-    //    NSString *firstStoreAddress = [firstStore objectForKey:@"address"];
-    
-
 }
+
+// Set the text of textField and textView to an empty string so it clears when the clear button is tapped
 - (IBAction)clear:(id)sender {
     
     self.textField.text = @"";
     self.textView.text = @"";
+    
+    [self save:sender];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - TextField Delegate Methods
+
+// dismiss the keyboard inside this method
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
@@ -74,57 +57,68 @@ static NSString * const keyForBodyText = @"body text";
 }
 
 
-
-
-
-
+// call the save method inside the textFieldDidEndEditing method
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
-    [self save];
+    [self save:textField];
 }
 
 
+#pragma mark - TextView Delegate Methods
 
+// call the save method inside the textViewDidChange method
 - (void)textViewDidChange:(UITextView *)textView {
 
-    [self save];
+    [self save:textView];
     
 }
 
-- (void)save {
+
+#pragma mark - My Own Methods
+
+- (IBAction)save:(id)sender {
     
-    NSDictionary *entry = @{keyForTitle: self.textField.text, keyForBodyText: self.textView.text};
+    // Check to see if sel.entry == nil
+    if (!self.entry) {
+        
+        // if it's nil, create a new entry and set it to self.entry
+        self.entry = [[Entry alloc] init];
+        
+        // set the properties of self.entry to the title and textfield text values
+        self.entry.title = self.textField.text;
+        self.entry.body = self.textView.text;
+    }
+
+    // grab the array of entries from [Entry loadEntriesFromDefaults]
+    NSMutableArray *entries = [Entry loadEntriesFromDefaults];
     
-    // store the dictionary in NSUserDefaults for the entry key
-    [[NSUserDefaults standardUserDefaults] setObject:entry forKey:keyForEntry];
-    [[NSUserDefaults standardUserDefaults]synchronize];
+    // Add self.entry to the array
+    [entries addObject:self.entry];
+    
+    // call [Entry storeEntriesInDefaults:self.entry] and pass in self.entry
+    [Entry storeEntriesInDefaults:entries];
+    
 }
+
+
+// create an updateViewWithDictionary method that takes an NSDictionary and updates the textView and textField text to the body text key and title key dictionaries
 
 -(void)updateViewWithDictionary:(NSDictionary *)dictionary {
+    
+//    // check to see if there is a title and body key first
+//    
+//    if (dictionary[keyForBodyText]) {
+//        self.textView.text = dictionary[keyForBodyText];
+//    }
+//    
+//    if (dictionary[keyForTitle]) {
+//        self.textField.text = dictionary[keyForTitle];
+//    }
+    
     
     self.textView.text = dictionary[keyForBodyText];
     self.textField.text = dictionary[keyForTitle];
 }
-
-// Create a dictionary for ice cream shops
-//- (NSDictionary *)iceCreamShops {
-//
-//    return @{
-//             @"city":@"provo",
-//             @"stores":
-//                 @[
-//                     @{
-//                         @"name": @"coldstone",
-//                         @"address": @"123 Main St."
-//                    },
-//                    @{
-//                         @"name": @"creamery",
-//                         @"address": @"900 East"
-//                    }
-//                ]
-//             };
-//}
-
 
 
 @end
