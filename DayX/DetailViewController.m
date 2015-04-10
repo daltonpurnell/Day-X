@@ -54,11 +54,45 @@ static NSString * const keyForBodyText = @"body text";
     
     
 }
+
+#pragma mark - custom methods
+
 - (IBAction)clear:(id)sender {
     
     self.textField.text = @"";
     self.textView.text = @"";
     [self save];
+}
+
+- (void)save {
+    
+    NSDictionary *entry = @{keyForTitle: self.textField.text, keyForBodyText: self.textView.text};
+    
+    // store the dictionary in NSUserDefaults for the entry key
+    [[NSUserDefaults standardUserDefaults] setObject:entry forKey:keyForEntry];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
+
+
+#pragma mark - TextField and TextView delegate methods
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    [self save];
+}
+
+
+- (void)textViewDidChange:(UITextView *)textView {
+    
+    [self save];
+    
+}
+
+
+-(void)updateViewWithDictionary:(NSDictionary *)dictionary {
+    
+    self.textView.text = dictionary[keyForBodyText];
+    self.textField.text = dictionary[keyForTitle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,33 +107,6 @@ static NSString * const keyForBodyText = @"body text";
     return YES;
 }
 
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    
-    [self save];
-}
-
-
-- (void)textViewDidChange:(UITextView *)textView {
-    
-    [self save];
-    
-}
-
-- (void)save {
-    
-    NSDictionary *entry = @{keyForTitle: self.textField.text, keyForBodyText: self.textView.text};
-    
-    // store the dictionary in NSUserDefaults for the entry key
-    [[NSUserDefaults standardUserDefaults] setObject:entry forKey:keyForEntry];
-    [[NSUserDefaults standardUserDefaults]synchronize];
-}
-
--(void)updateViewWithDictionary:(NSDictionary *)dictionary {
-    
-    self.textView.text = dictionary[keyForBodyText];
-    self.textField.text = dictionary[keyForTitle];
-}
 
 // Create a dictionary for ice cream shops
 //- (NSDictionary *)iceCreamShops {
