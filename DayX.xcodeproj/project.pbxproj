@@ -21,6 +21,7 @@
 		711A508F19388096005642EF /* DayXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 711A508E19388096005642EF /* DayXTests.m */; };
 		CF4DE9AB1AD4C880009DF6CF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4DE9AA1AD4C880009DF6CF /* Storyboard.storyboard */; };
 		CF4DE9AE1AD4C964009DF6CF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4DE9AD1AD4C964009DF6CF /* DetailViewController.m */; };
+		CF4DE9B11AD758C8009DF6CF /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4DE9B01AD758C8009DF6CF /* Entry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CF4DE9AA1AD4C880009DF6CF /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		CF4DE9AC1AD4C964009DF6CF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CF4DE9AD1AD4C964009DF6CF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CF4DE9AF1AD758C8009DF6CF /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		CF4DE9B01AD758C8009DF6CF /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				711A507919388095005642EF /* DXAppDelegate.m */,
 				CF4DE9AC1AD4C964009DF6CF /* DetailViewController.h */,
 				CF4DE9AD1AD4C964009DF6CF /* DetailViewController.m */,
+				CF4DE9AF1AD758C8009DF6CF /* Entry.h */,
+				CF4DE9B01AD758C8009DF6CF /* Entry.m */,
 				CF4DE9AA1AD4C880009DF6CF /* Storyboard.storyboard */,
 				711A507B19388095005642EF /* Images.xcassets */,
 				711A507019388095005642EF /* Supporting Files */,
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4DE9B11AD758C8009DF6CF /* Entry.m in Sources */,
 				711A507A19388095005642EF /* DXAppDelegate.m in Sources */,
 				711A507619388095005642EF /* main.m in Sources */,
 				CF4DE9AE1AD4C964009DF6CF /* DetailViewController.m in Sources */,

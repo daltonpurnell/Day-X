@@ -27,7 +27,7 @@
                                     <outlet property="delegate" destination="dzu-ZV-8Mv" id="LYG-dK-52i"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text that will be cleared" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-3i-gsB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0K-3i-gsB">
                                 <rect key="frame" x="16" y="148" width="278" height="303"/>
                                 <color key="backgroundColor" red="0.89883207070707072" green="0.89883207070707072" blue="0.89883207070707072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -68,7 +68,13 @@
                             <constraint firstItem="X0K-3i-gsB" firstAttribute="leading" secondItem="0em-J7-7go" secondAttribute="leading" id="vd6-KH-SsN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OJK-ob-p9D"/>
+                    <navigationItem key="navigationItem" id="OJK-ob-p9D">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="dng-7v-sdb">
+                            <connections>
+                                <action selector="save:" destination="dzu-ZV-8Mv" id="PyJ-wJ-NBV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textField" destination="0em-J7-7go" id="Dd0-3h-zm2"/>
                         <outlet property="textView" destination="X0K-3i-gsB" id="aa4-96-op1"/>
