@@ -10,4 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
+- (void)updateWithTitle:(NSString *)title body:(NSString *)body;
+
 @end

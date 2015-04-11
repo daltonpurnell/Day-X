@@ -23,6 +23,9 @@
 		CF316E741AD4C953002DB7BF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316E731AD4C953002DB7BF /* DetailViewController.m */; };
 		CF316E761AD4DB05002DB7BF /* WrinkledPaperBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CF316E751AD4DB05002DB7BF /* WrinkledPaperBackground.png */; };
 		CF316EE31AD758C9002DB7BF /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316EE21AD758C9002DB7BF /* Entry.m */; };
+		CF316F5C1AD98AFB002DB7BF /* DXListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316F5B1AD98AFB002DB7BF /* DXListViewController.m */; };
+		CF316F5F1AD98B1F002DB7BF /* DXListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316F5E1AD98B1F002DB7BF /* DXListDataSource.m */; };
+		CF316F621AD99710002DB7BF /* DXEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF316F611AD99710002DB7BF /* DXEntryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,12 @@
 		CF316E751AD4DB05002DB7BF /* WrinkledPaperBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WrinkledPaperBackground.png; sourceTree = "<group>"; };
 		CF316EE11AD758C9002DB7BF /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		CF316EE21AD758C9002DB7BF /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		CF316F5A1AD98AFB002DB7BF /* DXListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXListViewController.h; sourceTree = "<group>"; };
+		CF316F5B1AD98AFB002DB7BF /* DXListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXListViewController.m; sourceTree = "<group>"; };
+		CF316F5D1AD98B1F002DB7BF /* DXListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXListDataSource.h; sourceTree = "<group>"; };
+		CF316F5E1AD98B1F002DB7BF /* DXListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXListDataSource.m; sourceTree = "<group>"; };
+		CF316F601AD99710002DB7BF /* DXEntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXEntryController.h; sourceTree = "<group>"; };
+		CF316F611AD99710002DB7BF /* DXEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXEntryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,12 @@
 			children = (
 				711A507819388095005642EF /* DXAppDelegate.h */,
 				711A507919388095005642EF /* DXAppDelegate.m */,
+				CF316F601AD99710002DB7BF /* DXEntryController.h */,
+				CF316F611AD99710002DB7BF /* DXEntryController.m */,
+				CF316F5A1AD98AFB002DB7BF /* DXListViewController.h */,
+				CF316F5B1AD98AFB002DB7BF /* DXListViewController.m */,
+				CF316F5D1AD98B1F002DB7BF /* DXListDataSource.h */,
+				CF316F5E1AD98B1F002DB7BF /* DXListDataSource.m */,
 				CF316E721AD4C953002DB7BF /* DetailViewController.h */,
 				CF316E731AD4C953002DB7BF /* DetailViewController.m */,
 				CF316EE11AD758C9002DB7BF /* Entry.h */,
@@ -259,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF316EE31AD758C9002DB7BF /* Entry.m in Sources */,
+				CF316F621AD99710002DB7BF /* DXEntryController.m in Sources */,
 				711A507A19388095005642EF /* DXAppDelegate.m in Sources */,
 				711A507619388095005642EF /* main.m in Sources */,
+				CF316F5C1AD98AFB002DB7BF /* DXListViewController.m in Sources */,
+				CF316F5F1AD98B1F002DB7BF /* DXListDataSource.m in Sources */,
 				CF316E741AD4C953002DB7BF /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

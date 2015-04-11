@@ -23,6 +23,24 @@
     return self;
 }
 
+- (NSDictionary *)entryDictionary {
+    
+    NSMutableDictionary *entryDictionary = [NSMutableDictionary new];
+    if (self.title) {
+        [entryDictionary setObject:self.title forKey:keyForTitle];
+    }
+    if (self.body) {
+        [entryDictionary setObject:self.body forKey:keyForBodyText];
+    }
+    if (self.timestamp) {
+        [entryDictionary setObject:self.timestamp forKey:timestampKey];
+    }
+    
+    return entryDictionary;
+    
+}
+
+
 -(NSDictionary *)dictionaryFromEntry {
     
     NSMutableDictionary *dictionaryFromEntry = [NSMutableDictionary new];

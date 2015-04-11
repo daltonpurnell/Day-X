@@ -26,12 +26,17 @@ static NSString *const timestampKey = @"time stamp";
 
 @interface Entry : NSObject
 
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *body;
 @property (nonatomic, strong) NSDate *timestamp;
 @property (nonatomic, strong) NSString *entry;
+@property (nonatomic, strong) NSArray *allEntries;
 
-+ (NSMutableArray *)loadEntriesFromDefaults;
-+ (void)storeEntriesInDefaults:(NSArray *)entries;
+-(NSDictionary *)entryDictionary;
+
+-(id)initWithDictionary:(NSDictionary *)dictionary;
+
+
 
 @end
