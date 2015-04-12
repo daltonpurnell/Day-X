@@ -26,9 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // TO DO: take this code out when you implement the list
-    self.entry = [DXEntryController sharedInstance].allEntries.firstObject;
-    [self updateWithTitle:self.entry.title body:self.entry.body];
+    
+    // Set the text of your title and text to the entry's values
+    self.textField.text = self.entry.title;
+    self.textView.text = self.entry.body;
+    
+    
+//    // TO DO: take this code out when you implement the list
+//    self.entry = [DXEntryController sharedInstance].allEntries.firstObject;
+//    [self updateWithTitle:self.entry.title body:self.entry.body];
 }
 
 
@@ -41,9 +47,7 @@
 
 
 
-
-
-#pragma mark - TextField Delegate Methods
+#pragma mark - TextField Delegate Method
 
 // dismiss the keyboard inside this method
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -52,6 +56,7 @@
     
     return YES;
 }
+
 
 
 #pragma mark - My Own Methods
@@ -75,17 +80,31 @@
 }
 
 
-// Set the text of textField and textView to an empty string so it clears when the clear button is tapped
+
+
 - (IBAction)clear:(id)sender {
     
+    // Set the text of textField and textView to an empty string so it clears when the clear button is tapped
     self.textField.text = @"";
     self.textView.text = @"";
-    
-    [self save:sender];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+
+
+
+// dd a method updateWithEntry:(Entry *)entry that will update the detail view
+-(void)updateWithEntry:(Entry *)entry {
+    
+    
+    // Store the Entry passed in to the entry property (self.entry)
+    self.entry = entry;
+    
+    
+    // Set the text of your title textField and text textView to the values from the entry object
+    self.textField.text = entry.title;
+    self.textView.text = entry.body;
+    
+    
 }
 
 

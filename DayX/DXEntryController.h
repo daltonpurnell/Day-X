@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Entry.h"
 
+
+
+
 @interface DXEntryController : NSObject
 
 + (DXEntryController *)sharedInstance;

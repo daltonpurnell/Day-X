@@ -7,8 +7,14 @@
 //
 
 #import "DXListViewController.h"
+#import "DetailViewController.h"
+#import "DXListDataSource.h"
+#import "DXEntryController.h"
 
 @interface DXListViewController () <UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DXListDataSource *dataSource;
 
 @end
 
@@ -24,11 +30,15 @@
 }
 
 
+
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // immediately deselect the cell
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    DetailViewController *detailViewController = [DetailViewController new];
+    [detailViewController updateWithEntry:[DXEntryController sharedInstance].allEntries[indexPath.row]];
+     
 }
 
 @end

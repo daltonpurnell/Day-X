@@ -13,6 +13,7 @@
 
 
 
+
 // This goes in the implementation file
 + (DXEntryController *)sharedInstance {
     
@@ -37,6 +38,7 @@
 
 
 
+
 - (void)loadEntriesFromDefaults {
     // retrieving dictionary from nsuser defaults
     NSArray *allEntries = [[NSUserDefaults standardUserDefaults]
@@ -56,17 +58,6 @@
     
 }
 
-
-
-
-- (void)synchronize {
-    
-    NSMutableArray *entryDictionaries = [NSMutableArray new];
-    
-    for (Entry *entry in self.allEntries) {
-        [entryDictionaries addObject:[entry entryDictionary]];
-    }
-}
 
 
 
@@ -94,11 +85,15 @@
 
 {
     
-    NSMutableArray *mutableEntries = [[NSMutableArray alloc] initWithArray:self.allEntries.mutableCopy];
+    NSMutableArray *mutableEntries = self.allEntries.mutableCopy;
     
     [mutableEntries removeObject:entry];
     
 }
+
+
+
+
 
 
 // create a mutable copy of the entries array, check to see if it contains oldEntry, and then if it does find the index and replace object at index.
@@ -109,7 +104,7 @@
         return;
     }
     
-    NSMutableArray *mutableEntries = [[NSMutableArray alloc] initWithArray:self.allEntries.mutableCopy];
+    NSMutableArray *mutableEntries = self.allEntries.mutableCopy;
     
     if ([mutableEntries containsObject:oldEntry]) {
     
@@ -119,6 +114,20 @@
     }
     
 }
+
+
+
+
+
+- (void)synchronize {
+    
+    NSMutableArray *entryDictionaries = [NSMutableArray new];
+    
+    for (Entry *entry in self.allEntries) {
+        [entryDictionaries addObject:[entry entryDictionary]];
+    }
+}
+
 
 
 
