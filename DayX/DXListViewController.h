@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DXListDataSource.h"
+#import "DetailViewController.h"
+#import "DXEntryController.h"
 
 @interface DXListViewController : UIViewController
 

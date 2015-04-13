@@ -14,7 +14,6 @@
 
 @interface DetailViewController : UIViewController
 
-- (void)updateWithTitle:(NSString *)title body:(NSString *)body;
 
 -(void)updateWithEntry:(Entry *)entry;
 

@@ -23,6 +23,22 @@
 @implementation DetailViewController
 
 
+
+// dd a method updateWithEntry:(Entry *)entry that will update the detail view
+-(void)updateWithEntry:(Entry *)entry {
+    
+    
+    // Store the Entry passed in to the entry property (self.entry)
+    self.entry = entry;
+    
+    
+    // Set the text of your title textField and text textView to the values from the entry object
+    self.textField.text = entry.title;
+    self.textView.text = entry.body;
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,15 +54,6 @@
 }
 
 
-- (void)updateWithTitle:(NSString *)title body:(NSString *)body {
-    
-    self.textField.text = title;
-    self.textView.text = body;
-    
-}
-
-
-
 #pragma mark - TextField Delegate Method
 
 // dismiss the keyboard inside this method
@@ -60,6 +67,18 @@
 
 
 #pragma mark - My Own Methods
+
+- (IBAction)clear:(id)sender {
+    
+    // Set the text of textField and textView to an empty string so it clears when the clear button is tapped
+    self.textField.text = @"";
+    self.textView.text = @"";
+}
+
+
+
+
+
 
 - (IBAction)save:(id)sender {
     
@@ -80,32 +99,6 @@
 }
 
 
-
-
-- (IBAction)clear:(id)sender {
-    
-    // Set the text of textField and textView to an empty string so it clears when the clear button is tapped
-    self.textField.text = @"";
-    self.textView.text = @"";
-}
-
-
-
-
-// dd a method updateWithEntry:(Entry *)entry that will update the detail view
--(void)updateWithEntry:(Entry *)entry {
-    
-    
-    // Store the Entry passed in to the entry property (self.entry)
-    self.entry = entry;
-    
-    
-    // Set the text of your title textField and text textView to the values from the entry object
-    self.textField.text = entry.title;
-    self.textView.text = entry.body;
-    
-    
-}
 
 
 @end
